@@ -1,2 +1,2 @@
 # kokkoro-plugin-cherugo
-切噜～♪
+> 切噜～♪
