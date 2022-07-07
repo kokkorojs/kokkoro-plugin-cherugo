@@ -1,3 +1,4 @@
+import { Plugin } from 'kokkoro';
 import Encoder from './encoder';
 
 const cherugo = new Encoder('切卟叮咧哔唎啪啰啵嘭噜噼巴拉蹦铃');
@@ -21,4 +22,23 @@ function valuesEncode(raw_string: string) {
   return '切噜～♪' + new_string;
 }
 
-console.log(valuesEncode('诶嘿~'));
+
+const plugin = new Plugin('cherugo');
+
+plugin
+  .command('encode <text>', 'group')
+  .description('切噜语转换')
+  .sugar(/^切噜一下(?<text>.+)$/)
+  .action(event => {
+    const { query } = event;
+    event.reply(valuesEncode(query.text));
+  })
+
+plugin
+  .command('decode <text>', 'group')
+  .description('切噜语转换')
+  .sugar(/^切噜～♪.+$/)
+  .action(event => {
+    const { raw_message } = event;
+    event.reply(valuesDecode(raw_message.trim()));
+  })
