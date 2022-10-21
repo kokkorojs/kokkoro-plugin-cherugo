@@ -26,19 +26,19 @@ function valuesEncode(raw_string: string) {
 const plugin = new Plugin('cherugo');
 
 plugin
-  .command('encode <text>', 'group')
+  .command('encode <content>')
   .description('切噜语转换')
-  .sugar(/^切噜一下(?<text>.+)$/)
-  .action(event => {
-    const { query } = event;
-    event.reply(valuesEncode(query.text));
+  .sugar(/^切噜一下(?<content>.+)$/)
+  .action(ctx => {
+    const { content } = ctx.query;
+    ctx.reply(valuesEncode(content));
   })
 
 plugin
-  .command('decode <text>', 'group')
+  .command('decode <content>')
   .description('切噜语转换')
-  .sugar(/^切噜～♪.+$/)
-  .action(event => {
-    const { raw_message } = event;
-    event.reply(valuesDecode(raw_message.trim()));
+  .sugar(/(?<content>^切噜～♪.+$)/)
+  .action(ctx => {
+    const { content } = ctx.query;
+    ctx.reply(valuesDecode(content.trim()));
   })
