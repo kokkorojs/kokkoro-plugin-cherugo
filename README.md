@@ -14,5 +14,5 @@ npm i kokkoro-plugin-cherugo
 
 ## 鸣谢
 
-http://ngabbs.com/read.php?tid=21636504
+http://ngabbs.com/read.php?tid=21636504  
 https://github.com/yuudi/cherugo.js
