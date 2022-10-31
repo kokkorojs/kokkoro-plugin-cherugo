@@ -31,6 +31,7 @@ plugin
   .sugar(/^切噜一下(?<content>.+)$/)
   .action(ctx => {
     const { content } = ctx.query;
+
     ctx.reply(valuesEncode(content));
   })
 
@@ -40,5 +41,6 @@ plugin
   .sugar(/(?<content>^切噜～♪.+$)/)
   .action(ctx => {
     const { content } = ctx.query;
+
     ctx.reply(valuesDecode(content.trim()));
   })
