@@ -88,7 +88,7 @@ class Cherugo {
   }
 }
 
-// TODO ⎛⎝≥⏝⏝≤⎛⎝ 群自定义词典
+// TODO ／人◕ ‿‿ ◕人＼ 群自定义词典
 const cherugo = new Cherugo('切卟叮咧哔唎啪啰啵嘭噜噼巴拉蹦铃');
 
 export function valuesDecode(encoded_string: string) {

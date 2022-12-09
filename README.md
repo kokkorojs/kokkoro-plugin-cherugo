@@ -4,7 +4,7 @@
 
 ## 安装
 
-``` shell
+```shell
 # 切换至 bot 目录
 cd bot
 

@@ -1,6 +1,6 @@
 {
   "name": "kokkoro-plugin-cherugo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "切噜～♪",
   "main": "lib/index.js",
   "scripts": {
@@ -13,15 +13,15 @@
   "keywords": [
     "kokkoro"
   ],
-  "author": "yuki",
+  "author": "yuki <mail@yuki.sh>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kokkorojs/kokkoro-plugin-cherugo/issues"
   },
   "homepage": "https://github.com/kokkorojs/kokkoro-plugin-cherugo#readme",
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "kokkoro": "^1.1.0"
+    "@types/node": "^18.11.12",
+    "kokkoro": "^1.2.0"
   },
   "files": [
     "lib"
