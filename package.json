@@ -1,6 +1,6 @@
 {
   "name": "kokkoro-plugin-cherugo",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "切噜～♪",
   "main": "lib/index.js",
   "scripts": {
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/kokkorojs/kokkoro-plugin-cherugo#readme",
   "devDependencies": {
-    "@types/node": "^18.11.12",
-    "kokkoro": "^1.2.0"
+    "@types/node": "^18.11.19",
+    "kokkoro": "^2.0.0-alpha.1"
   },
   "files": [
     "lib"
