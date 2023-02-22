@@ -1,28 +1,26 @@
-import { Plugin } from 'kokkoro';
+import { Plugin } from '@kokkoro/core';
 import { valuesDecode, valuesEncode } from './service';
 
-const { version } = require('../package.json');
+const pkg = require('../package.json');
 const plugin = new Plugin('cherugo');
 
 plugin
-  .version(version)
+  .version(pkg.version)
 
 plugin
   .command('encode <content>')
   .description('切噜语加密')
   .sugar(/^切噜一下(?<content>.+)$/)
-  .action(ctx => {
+  .action(async (ctx) => {
     const { content } = ctx.query;
-
-    ctx.reply(valuesEncode(content.trim()));
+    await ctx.reply(valuesEncode(content.trim()));
   })
 
 plugin
   .command('decode <content>')
   .description('切噜语解密')
   .sugar(/(?<content>^切噜～♪.+$)/)
-  .action(ctx => {
+  .action(async (ctx) => {
     const { content } = ctx.query;
-
-    ctx.reply(valuesDecode(content.trim()));
+    await ctx.reply(valuesDecode(content.trim()));
   })
